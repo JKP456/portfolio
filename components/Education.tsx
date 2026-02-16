@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { GraduationCap, Terminal } from "lucide-react";
+import Image from "next/image"; // นำเข้า Image สำหรับจัดการรูปภาพ
 
 export default function Education() {
   return (
@@ -24,14 +25,31 @@ export default function Education() {
 
           <div className="bg-[#080808] border border-green-900/30 p-6 rounded-lg group hover:border-green-500/50 transition-all">
             <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6">
-              <div>
-                <h3 className="text-2xl font-bold text-white group-hover:text-green-400 transition-colors">
-                  Bachelor of Computer Science
-                </h3>
-                <p className="text-green-600 font-mono flex items-center gap-2 mt-1">
-                  <GraduationCap size={18} /> Bangkok University
-                </p>
+              
+              {/* ส่วนชื่อปริญญาและโลโก้ */}
+              <div className="flex items-center gap-5">
+               
+                {/* University Logo Container - เพิ่ม p-3 เพื่อเว้นระยะจากขอบกรอบ */}
+<div className="relative w-14 h-14 md:w-16 md:h-16 shrink-0 overflow-hidden rounded-xl border border-green-900/30 bg-black/50 p-3 group-hover:border-green-500/50 transition-all">
+  <Image 
+    src="/images/bangkokUni.svg" 
+    alt="Bangkok University"
+    fill
+    /* object-contain จะช่วยให้รูปไม่เสียสัดส่วนและอยู่กึ่งกลาง */
+    className="object-contain brightness-0 invert sepia-[1] saturate-[10000%] hue-rotate-[80deg] opacity-70 group-hover:opacity-100 transition-all duration-500"
+  />
+</div>
+
+                <div>
+                  <h3 className="text-xl md:text-2xl font-bold text-white group-hover:text-green-400 transition-colors">
+                    Bachelor of Computer Science
+                  </h3>
+                  <p className="text-green-600 font-mono flex items-center gap-2 mt-1">
+                    <GraduationCap size={18} /> Bangkok University
+                  </p>
+                </div>
               </div>
+
               <div className="text-right">
                 <span className="text-[10px] font-mono text-green-900 bg-green-950/20 px-3 py-1 rounded border border-green-900/50 block md:inline-block">
                   2022 — 2026 (ACTIVE)
@@ -47,7 +65,6 @@ export default function Education() {
                 </p>
               </div>
 
-              {/* Added Technical Focus to highlight skills over GPA */}
               <div className="flex items-start gap-3">
                 <Terminal size={14} className="text-green-500 mt-1 shrink-0" />
                 <p>
