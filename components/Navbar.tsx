@@ -22,7 +22,7 @@ export default function Navbar() {
           href="#"
           className="text-xl font-bold tracking-widest text-[#00ff41]"
         >
-          &gt; KUN.exe
+          &gt; KHUN.exe
         </a>
 
         {/* Desktop Menu */}

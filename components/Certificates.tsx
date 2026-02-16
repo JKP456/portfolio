@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { ShieldCheck, FileText, Download, ExternalLink, Award } from "lucide-react";
+import awsBadge from "@/public/certificates/blob.png";
 
 const certificates = [
   {
@@ -14,7 +15,7 @@ const certificates = [
   {
     title: "Badge of AWS Academy",
     issuer: "AWS",
-    image: "/certificates/blob.png",
+    image: awsBadge,
     type: "CLOUD"
   },
   {

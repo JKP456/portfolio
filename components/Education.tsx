@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { GraduationCap, Terminal } from "lucide-react";
 import Image from "next/image"; // นำเข้า Image สำหรับจัดการรูปภาพ
+import logo from "@/public/images/bangkokUni.svg";
 
 export default function Education() {
   return (
@@ -32,7 +33,7 @@ export default function Education() {
                 {/* University Logo Container - เพิ่ม p-3 เพื่อเว้นระยะจากขอบกรอบ */}
 <div className="relative w-14 h-14 md:w-16 md:h-16 shrink-0 overflow-hidden rounded-xl border border-green-900/30 bg-black/50 p-3 group-hover:border-green-500/50 transition-all">
   <Image 
-    src="/images/bangkokUni.svg" 
+    src={logo} 
     alt="Bangkok University"
     fill
     /* object-contain จะช่วยให้รูปไม่เสียสัดส่วนและอยู่กึ่งกลาง */
