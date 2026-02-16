@@ -2,7 +2,7 @@ name: Deploy Next.js to GitHub Pages
 
 on:
   push:
-    branches: ["main"] # หรือชื่อ branch หลักของคุณ
+    branches: ["master"] # หรือชื่อ branch หลักของคุณ
 
 permissions:
   contents: read
