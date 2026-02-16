@@ -65,6 +65,9 @@ export default function SeniorProject() {
                 <div className="flex items-center gap-2 px-4 py-2 bg-green-950/10 border border-green-900/30 rounded text-green-400 text-sm font-mono">
                   Cloudinary
                 </div>
+                   <div className="flex items-center gap-2 px-4 py-2 bg-green-950/10 border border-green-900/30 rounded text-green-400 text-sm font-mono">
+                  Mongo DB
+                </div>
               </div>
 
               <a 
