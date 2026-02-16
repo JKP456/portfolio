@@ -5,7 +5,18 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Terminal, Cpu, Zap, CreditCard, BarChart3, X, Code2 } from "lucide-react";
 import MusicRecommender from "./music-ai"; 
 
-const projects = [
+// 1. เพิ่ม Interface เพื่อระบุประเภทข้อมูลของ Project
+interface Project {
+  id: string;
+  title: string;
+  tech: string;
+  icon: React.ReactNode;
+  status: string;
+  github: string;
+  description: string;
+}
+
+const projects: Project[] = [
   {
     id: "mlbb",
     title: "MLBB Draft-Pick System",
@@ -54,7 +65,8 @@ const projects = [
 ];
 
 export default function Projects() {
-  const [selectedProject, setSelectedProject] = useState(null);
+  // 2. กำหนดประเภทให้ useState เป็น <Project | null> เพื่อรองรับทั้งค่าว่างและข้อมูลโปรเจกต์
+  const [selectedProject, setSelectedProject] = useState<Project | null>(null);
 
   return (
     <section id="projects" className="py-24 px-6 bg-black min-h-screen font-mono">
@@ -69,7 +81,8 @@ export default function Projects() {
           />
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4"> {/* ปรับเป็น 5 คอลัมน์สำหรับ Desktop */}
+        {/* Grid Responsive: 1 คอลัมน์บนมือถือ และ 5 คอลัมน์บนจอใหญ่ตามที่คุณต้องการ */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4"> 
           {projects.map((project, index) => (
             <motion.div
               key={index}
@@ -127,7 +140,7 @@ export default function Projects() {
                     </button>
                   ) : (
                     <div className="flex items-center justify-center text-gray-700 border border-white/5 py-1.5 rounded text-[8px] opacity-40 cursor-default">
-                       SECURE_LINK
+                        SECURE_LINK
                     </div>
                   )}
                 </div>
@@ -137,7 +150,7 @@ export default function Projects() {
         </div>
       </div>
 
-      {/* Modal - ปรับให้ Compact ตามที่คุยกันไว้ */}
+      {/* Modal - ปรับให้ Compact */}
       <AnimatePresence>
         {selectedProject && (
           <div className="fixed inset-0 z-50 flex items-center justify-center p-6 bg-black/90 backdrop-blur-sm">
