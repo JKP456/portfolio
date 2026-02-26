@@ -2,10 +2,17 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { ShieldCheck, FileText, Download, ExternalLink, Award } from "lucide-react";
-import awsBadge from "@/public/certificates/blob.png";
+import { ShieldCheck, Download, ExternalLink, Award } from "lucide-react";
 
-const certificates = [
+type Certificate = {
+  title: string;
+  issuer: string;
+  file?: string;
+  image?: string;
+  type: string;
+};
+
+const certificates: Certificate[] = [
   {
     title: "Basic Cybersecurity",
     issuer: "NCSA",
@@ -15,7 +22,6 @@ const certificates = [
   {
     title: "Badge of AWS Academy",
     issuer: "AWS",
-    image: awsBadge,
     type: "CLOUD"
   },
   {
@@ -27,6 +33,9 @@ const certificates = [
 ];
 
 export default function Certificates() {
+  const basePath = process.env.NODE_ENV === "production" ? "/portfolio" : "";
+  const withBasePath = (path?: string) => (path ? `${basePath}${path}` : "#");
+
   return (
     <section id="certificates" className="py-24 px-6 bg-black">
       <div className="max-w-6xl mx-auto">
@@ -90,15 +99,16 @@ export default function Certificates() {
                 {/* Actions */}
                 <div className="flex items-center justify-between pt-4 border-t border-green-900/20">
                   <a
-                    href={cert.file || "#"}
+                    href={withBasePath(cert.file)}
                     target="_blank"
+                    rel="noopener noreferrer"
                     className="flex items-center gap-1.5 text-[10px] font-bold text-green-500 hover:text-white transition-colors uppercase tracking-wider"
                   >
                     <ExternalLink size={12} /> View
                   </a>
                   {cert.file && (
                     <a
-                      href={cert.file}
+                      href={withBasePath(cert.file)}
                       download
                       className="p-1.5 rounded-md hover:bg-green-500 hover:text-black transition-all text-gray-600"
                     >
