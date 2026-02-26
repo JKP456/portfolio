@@ -22,6 +22,7 @@ const certificates: Certificate[] = [
   {
     title: "Badge of AWS Academy",
     issuer: "AWS",
+    file: "/certificates/blob.png",
     type: "CLOUD"
   },
   {
