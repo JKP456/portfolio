@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Github, Mail, Phone, ShieldCheck, Globe } from "lucide-react";
+import { Github, Mail, Phone, ShieldCheck, Globe, Linkedin } from "lucide-react";
 
 export default function Contact() {
   return (
@@ -14,7 +14,7 @@ export default function Contact() {
           <h2 className="text-2xl text-white uppercase tracking-[0.2em]">initiate --connection</h2>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
 
           {/* Email Port */}
           <motion.a
@@ -44,6 +44,22 @@ export default function Contact() {
             <Github className="mx-auto mb-4 text-green-700 group-hover:text-green-400 transition-colors" size={32} />
             <p className="text-[10px] font-mono text-green-900 uppercase mb-1 tracking-tighter">Remote: Origin</p>
             <p className="text-white font-mono text-sm group-hover:text-green-400 transition-colors">Source_Control</p>
+          </motion.a>
+
+          {/* LinkedIn Port */}
+          <motion.a
+            href="https://www.linkedin.com/in/your-profile"
+            target="_blank"
+            rel="noopener noreferrer"
+            whileHover={{ y: -5 }}
+            className="group bg-[#080808] border border-green-900/30 p-8 rounded-lg text-center transition-all hover:border-green-500/50 relative overflow-hidden"
+          >
+            <div className="absolute top-0 right-0 p-2 opacity-20 group-hover:opacity-100 transition-opacity">
+              <Linkedin size={12} className="text-green-500" />
+            </div>
+            <Linkedin className="mx-auto mb-4 text-green-700 group-hover:text-green-400 transition-colors" size={32} />
+            <p className="text-[10px] font-mono text-green-900 uppercase mb-1 tracking-tighter">Network: Professional</p>
+            <p className="text-white font-mono text-sm group-hover:text-green-400 transition-colors">LinkedIn_Profile</p>
           </motion.a>
 
           {/* Phone/Signal Port */}
