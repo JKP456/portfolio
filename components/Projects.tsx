@@ -58,7 +58,7 @@ const projects: Project[] = [
     title: "Secure Top-up Portal",
     tech: "Next.js, Prisma, Supabase, Stripe",
     icon: <CreditCard size={20} className="text-blue-500" />,
-    status: "INCOMPLETE",
+    status: "INPROGRESS",
     github: "https://github.com/JKP456/TermGame",
     description: "E-commerce platform with automated digital delivery and secure payment integration for gaming credits."
   }
@@ -66,7 +66,7 @@ const projects: Project[] = [
 
 export default function Projects() {
   // 2. กำหนดประเภทให้ useState เป็น <Project | null> เพื่อรองรับทั้งค่าว่างและข้อมูลโปรเจกต์
-  const [selectedProject, setSelectedProject] = useState<Project | null>(null);
+  const [selectedProject, setSelectedProject] = useState<Project | null>(null);  git add .
 
   return (
     <section id="projects" className="py-24 px-6 bg-black min-h-screen font-mono">
