@@ -66,7 +66,7 @@ const projects: Project[] = [
 
 export default function Projects() {
   // 2. กำหนดประเภทให้ useState เป็น <Project | null> เพื่อรองรับทั้งค่าว่างและข้อมูลโปรเจกต์
-  const [selectedProject, setSelectedProject] = useState<Project | null>(null);  git add .
+  const [selectedProject, setSelectedProject] = useState<Project | null>(null); 
 
   return (
     <section id="projects" className="py-24 px-6 bg-black min-h-screen font-mono">
