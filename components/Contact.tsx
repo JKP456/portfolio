@@ -48,7 +48,7 @@ export default function Contact() {
 
           {/* LinkedIn Port */}
           <motion.a
-            href="https://www.linkedin.com/in/your-profile"
+            href="https://www.linkedin.com/in/jakapan-ploensup-620678284"
             target="_blank"
             rel="noopener noreferrer"
             whileHover={{ y: -5 }}
