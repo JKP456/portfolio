@@ -35,7 +35,7 @@ const certificates: Certificate[] = [
     title: "The Basic of Google Cloud Compute",
     issuer: "Google",
     file: "/certificates/the-basics-of-google-cloud-compute-skill-badge.png",
-    type: "ELITE"
+    type: "CLOUD"
   }
 ];
 
