@@ -71,7 +71,7 @@ export default function Contact() {
               <Globe size={12} className="text-green-500" />
             </div>
             <Phone className="mx-auto mb-4 text-green-700 group-hover:text-green-400 transition-colors" size={32} />
-            <p className="text-[10px] font-mono text-green-900 uppercase mb-1 tracking-tighter">Line: +66 (TH)</p>
+            <p className="text-[10px] font-mono text-green-900 uppercase mb-1 tracking-tighter">Phone: +66 (TH)</p>
             <p className="text-white font-mono text-sm group-hover:text-green-400 transition-colors">092-883-5189</p>
           </motion.div>
 
