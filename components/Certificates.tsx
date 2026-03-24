@@ -31,6 +31,12 @@ const certificates: Certificate[] = [
     file: "/certificates/cyber-guardian-2025.pdf",
     type: "ELITE"
   },
+  {
+    title: "The Basic of Google Cloud Compute",
+    issuer: "Google",
+    file: "/certificates/the-basics-of-google-cloud-compute-skill-badge.png",
+    type: "ELITE"
+  }
 ];
 
 export default function Certificates() {
